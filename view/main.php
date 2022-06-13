@@ -142,13 +142,6 @@
                 </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                     <div class="col-lg-6">
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
                         <form id="contactForm">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
@@ -160,14 +153,25 @@
                                 <input class="form-control" id="email" type="email" required/>
                                 <label for="email">Endereço de Email</label>
                             </div>
-                            <!-- Phone number input-->
+                            <!-- Local name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" required/>
-                                <label for="phone">Número de Telefone</label>
-                            </div>
+                                <input class="form-control" id="local" type="text" required/>
+                                <label for="local">Nome do Local</label>
+                            </div>  
+                            <!-- Local type input-->
+                            <div class="form-floating mb-3">
+                                <select class="form-control" id="type" name="typelist" form="contactForm">
+                                    <option value="" data-default disabled selected></option>
+                                    <option value="Religioso">Religioso</option>
+                                    <option value="Artesanal">Artesanal</option>
+                                    <option value="Musical">Musical</option>
+                                    <option value="Esportivo">Esportivo</option>
+                                </select>
+                                <label for="type">Tipo do Local</label>
+                            </div>  
                             <!-- Message input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" style="height: 10rem" required></textarea>
+                                <textarea class="form-control" id="message" type="text" style="height: 10rem"></textarea>
                                 <label for="message">Sugestão</label>
                             </div>
                             <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">Enviar</button></div>
@@ -208,7 +212,7 @@
                         <div class="mt-5">
                             <div class="mb-2"><img class="img-thumbnail rounded-circle" src="./assets/img/devs/ph.png" alt="derley" width="70%" height="70%"></div>
                             <h3 class="text-white h4 mb-2">Pedro Henrique</h3>
-                            <p class="text-white mb-0">21 anos | Estudante de Ciência da Computação na UFCA | Frontend Developer</p>
+                            <p class="text-white mb-0">20 anos | Estudante de Ciência da Computação na UFCA | Frontend Developer</p>
                             <a href="https://github.com/Pedro-HenriqueFF" target="_blank"><img class="mt-2" src="./assets/img/logos/github-brands.svg" alt="GitHub" width="7%" height="7%"></a>
                         </div>
                     </div>

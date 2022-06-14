@@ -129,10 +129,10 @@
         </div>
         <!-- Call to action-->
         <section class="page-section bg-dark text-white">
-            <div class="container px-4 px-lg-5 text-center">
-                <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-                <a class="btn btn-light btn-xl" href="https://startbootstrap.com/theme/creative/">Download Now!</a>
-            </div>
+	        <div class="container px-4 px-lg-5 text-center">
+			    <h2 class="mb-4">Receba nossas novidades e atualizações em seu email</h2>
+			    <a target="_blank" href="" class="btn btn-light btn-xl">Quero receber!</a>
+	        </div>
         </section>
         <!-- Contact-->
         <section class="page-section" id="contact">

@@ -19,8 +19,8 @@
                 $this->banco = new mysqli($this->host, $this->user, $this->password, $this->database);
         
             } catch (mysqli_sql_exception $e){
-                $_SESSION['message'] = $e->getMessage();
-                $this->error();
+                echo $_SESSION['message'] = $e->getMessage();
+                // $this->error();
             }
         }
 
@@ -29,8 +29,8 @@
                 $sql_query = $this->banco->query($sql_code);
                 return $sql_query;
             } catch (mysqli_sql_exception $e){
-                $_SESSION['message'] = $e->getMessage();
-                $this->error();
+                echo $_SESSION['message'] = $e->getMessage();
+                // $this->error();
             }
         }
 
@@ -42,11 +42,11 @@
         {
             try{
                 $this->banco->close();
-                unset( $this->banco);
+                unset($this->banco);
             }
             catch (mysqli_sql_exception $e){
-                $_SESSION['message'] = $e->getMessage();
-                $this->error();
+                echo $_SESSION['message'] = $e->getMessage();
+                // $this->error();
             }
         }
 

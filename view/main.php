@@ -1,3 +1,7 @@
+<?php
+    require_once(PATH_CONTROLLER . "FormController.php");
+    (new Form)->sugestao();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -142,25 +146,25 @@
                 </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                     <div class="col-lg-6">
-                        <form id="contactForm">
+                        <form id="contactForm" action="" method="post" accept-charset="utf-8" autocomplete="on" enctype="multipart/form-data">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" required/>
+                                <input class="form-control" name="nome" id="name" type="text" required/>
                                 <label for="name">Nome Completo</label>
                             </div>
                             <!-- Email address input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" required/>
+                                <input class="form-control" name="email" id="email" type="email" required/>
                                 <label for="email">Endereço de Email</label>
                             </div>
                             <!-- Local name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="local" type="text" required/>
+                                <input class="form-control" name="local" id="local" type="text" required/>
                                 <label for="local">Nome do Local</label>
                             </div>  
                             <!-- Local type input-->
                             <div class="form-floating mb-3">
-                                <select class="form-control" id="type" name="typelist" form="contactForm">
+                                <select class="form-control" name="tipo" id="type" name="typelist" form="contactForm">
                                     <option value="" data-default disabled selected></option>
                                     <option value="Religioso">Religioso</option>
                                     <option value="Artesanal">Artesanal</option>
@@ -171,7 +175,7 @@
                             </div>  
                             <!-- Message input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" style="height: 10rem"></textarea>
+                                <textarea class="form-control" name="sugestao" id="message" type="text" style="height: 10rem"></textarea>
                                 <label for="message">Sugestão</label>
                             </div>
                             <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">Enviar</button></div>

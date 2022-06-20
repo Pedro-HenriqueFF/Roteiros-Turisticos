@@ -10,4 +10,9 @@
         "rota" => "/404",
         "pagina" => "erro404"
     );
+    
+    $rotas["mail"] = array(
+        "rota" => "/mail",
+        "pagina" => "mail"
+    );
 ?>

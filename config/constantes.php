@@ -4,4 +4,5 @@
     define("PATH_MODEL", PATH_APP . "model/"); // Defini o diretório do banco de dados (Model)
     define("PATH_VIEW", PATH_APP . "view/"); // Defini o diretório das telas (View)
     define("PATH_CONTROLLER", PATH_APP . "controller/"); // Defini o diretório das funções do sistema (Controller)
+    define("PATH_SOURCE", PATH_APP . "source/"); //
 ?>

@@ -12,7 +12,7 @@
 </head>
 <body>
     <?php
-        (new Email)->enviar();
+        (new Email)->enviar('pedinpressao@gmail.com', 'acorda pedrinho');
     ?>
 </body>
 </html>

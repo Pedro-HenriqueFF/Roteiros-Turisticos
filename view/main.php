@@ -31,7 +31,8 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Catálogo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portifólio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#notification">Mantenha-se Atualizado</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Sugestão</a></li>
                         <li class="nav-item"><a class="nav-link" href="#devs">Nossa Equipe</a></li>
                     </ul>
@@ -127,8 +128,8 @@
                 </div>
             </div>
         </div>
-        <!-- Call to action-->
-        <section class="page-section bg-dark text-white">
+        <!-- Notification -->
+        <section class="page-section bg-dark text-white" id="notification">
 	        <div class="container px-4 px-lg-5 text-center">
 			    <h2 class="mb-4">Receba nossas novidades e atualizações em seu email</h2>
 			    <a target="_blank" href="" class="btn btn-light btn-xl">Quero receber!</a>

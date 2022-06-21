@@ -21,7 +21,7 @@
                 $mail->SMTPAuth = true; //Habilita a autenticação SMTP
                 $mail->CharSet = 'UTF-8';
                 $mail->Username   = 'futurismo.titantech@gmail.com';
-                $mail->Password   = 'xxzoyotfrriebgfi';
+                $mail->Password   = 'senha';
                 // Criptografia do envio SSL também é aceito
                 $mail->SMTPSecure = 'tls';
                 // Informações específicadas pelo Google

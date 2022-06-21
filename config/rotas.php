@@ -6,13 +6,14 @@
         "pagina" => "main"
     );
 
+    $rotas["catalogo"] = array(
+        "rota" => "/catalogo",
+        "pagina" => "catalogo"
+    );
+
     $rotas["erro404"] = array(
         "rota" => "/404",
         "pagina" => "erro404"
     );
-    
-    $rotas["mail"] = array(
-        "rota" => "/mail",
-        "pagina" => "mail"
-    );
+
 ?>

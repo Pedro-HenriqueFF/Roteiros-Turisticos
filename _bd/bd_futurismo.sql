@@ -1,5 +1,5 @@
--- CREATE DATABASE futurismo;
--- USE futurismo;
+CREATE DATABASE futurismo;
+USE futurismo;
 
 CREATE TABLE `pessoas` (
   `id_pessoa` int(11) NOT NULL,

@@ -132,7 +132,45 @@
         <section class="page-section bg-dark text-white" id="notification">
 	        <div class="container px-4 px-lg-5 text-center">
 			    <h2 class="mb-4">Receba nossas novidades e atualizações em seu email</h2>
-			    <a target="_blank" href="" class="btn btn-light btn-xl">Quero receber!</a>
+			    <a href="" class="btn btn-light btn-xl" data-bs-toggle="modal" data-bs-target="#formModal">Quero receber!</a>
+                <!-- Modal -->
+                <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                    <div class="modal-dialog text-black">
+                        <div class="modal-content">
+                            <form id="notificationForm" action="" method="post" accept-charset="utf-8" autocomplete="on" enctype="multipart/form-data">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-black" id="modalLabel">Preencha suas informações</h5>
+                                </div>
+                                <div class="modal-body text-black">
+                                    <!-- Name input-->
+                                    <div class="form-floating mb-3">
+                                        <input class="form-control" name="nome-notif" id="name" type="text" required/>
+                                        <label for="name">Nome Completo</label>
+                                    </div>
+                                    <!-- Email address input-->
+                                    <div class="form-floating mb-3">
+                                        <input class="form-control" name="email-notif" id="email" type="email" required/>
+                                        <label for="email">Endereço de Email</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <select class="form-control" name="tipo-notif" id="type" name="typelist" form="contactForm">
+                                            <option value="" data-default disabled selected></option>
+                                            <option value="Religioso">Religioso</option>
+                                            <option value="Artesanal">Artesanal</option>
+                                            <option value="Musical">Musical</option>
+                                            <option value="Esportivo">Esportivo</option>
+                                        </select>
+                                        <label for="type">Tipo do Local</label>
+                                    </div>  
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Cancelar</button>
+                                    <button class="btn btn-primary" id="submitButton-notif" type="submit">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
 	        </div>
         </section>
         <!-- Contact-->

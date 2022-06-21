@@ -11,7 +11,7 @@
     }
 
     class Email{
-        public function enviar(){
+        public function enviar($email, $mensagem){
             // Instância da classe
             $mail = new PHPMailer(true);
             try
@@ -19,21 +19,22 @@
                 // Configurações do servidor
                 $mail->isSMTP();        //Devine o uso de SMTP no envio
                 $mail->SMTPAuth = true; //Habilita a autenticação SMTP
-                $mail->Username   = 'email';
-                $mail->Password   = 'senha';
+                $mail->CharSet = 'UTF-8';
+                $mail->Username   = 'futurismo.titantech@gmail.com';
+                $mail->Password   = 'xxzoyotfrriebgfi';
                 // Criptografia do envio SSL também é aceito
                 $mail->SMTPSecure = 'tls';
                 // Informações específicadas pelo Google
                 $mail->Host = 'smtp.gmail.com';
                 $mail->Port = 587;
                 // Define o remetente
-                $mail->setFrom('remetente.com', 'Nome do Remetente');
+                $mail->setFrom('futurismo.titantech@gmail.com', 'Futurismo');
                 // Define o destinatário
-                $mail->addAddress('Destinatario.com', 'Destinatário');
+                $mail->addAddress($email, $email);
                 // Conteúdo da mensagem
                 $mail->isHTML(true);  // Seta o formato do e-mail para aceitar conteúdo HTML
-                $mail->Subject = 'Assunto';
-                $mail->Body    = 'Este é o corpo da mensagem <b>Olá em negrito!</b>';
+                $mail->Subject = 'Nosso catálogo foi atualizado para você!';
+                $mail->Body    = $mensagem;
                 $mail->AltBody = 'Este é o cortpo da mensagem para clientes de e-mail que não reconhecem HTML';
                 // Enviar
                 $mail->send();

@@ -61,7 +61,7 @@
                         <h2 class="text-white mt-0">O que você precisa saber</h2>
                         <hr class="divider divider-light" />
                         <p class="text-white-75 mb-4">Selecione os locais de turismo que você deseja visitar e nossa aplicação montará um roteiro personalizado totalmente gratuito.</p>
-                        <a class="btn btn-light btn-xl" href="#portfolio">Comece Agora</a>
+                        <a class="btn btn-light btn-xl" href="catalogo">Comece Agora</a>
                     </div>
                 </div>
             </div>

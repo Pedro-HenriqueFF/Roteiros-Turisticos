@@ -40,7 +40,7 @@
         <main>
         <header class="page-section bg-secondary">
             <div class="container px-4 px-lg-5 h-100 pt-5">
-                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                <div class="row gx-4 gx-lg-5 h-100">
                     <form id="TagForm" action="" method="post" accept-charset="utf-8" autocomplete="on" enctype="multipart/form-data">
                         <div class="form-floating mb-3">
                             <input class="form-control" name="pesquisa" id="search" type="search" placeholder="Pesquisar" aria-label="Pesquisar" required/>
@@ -56,11 +56,8 @@
                         <div class="col-lg-4 col-sm-6 p-4 align-self-center">
                             <a class="portfolio-box" href="assets/img/portfolio/fullsize/padim.jpg" title="Estátua do Padre Cícero">
                                 <img class="img-fluid" src="assets/img/portfolio/thumbnails/padim.jpg" alt="..." />
-                                <div class="portfolio-box-caption">
-                                    <div class="project-category text-white-50">Religioso</div>
-                                    <div class="project-name">Estátua do Padre Cícero</div>
-                                </div>
                             </a>
+                            <div class="project-name text-center pt-2">Estátua do Padre Cícero</div>
                         </div>
                         <div class="col-lg-4 col-sm-6 p-4 align-self-center">
                             <a class="portfolio-box" href="assets/img/portfolio/fullsize/araja.jpg" title="Arajara Park">
@@ -99,8 +96,8 @@
                             </a>
                         </div>
                         <div class="col-lg-4 col-sm-6 p-4 align-self-center">
-                            <a class="portfolio-box" href="assets/img/portfolio/fullsize/bdn.jpg" title="Centro Cultural Banco do Nordeste">
-                                <img class="img-fluid" src="assets/img/portfolio/thumbnails/bdn.jpg" alt="..." />
+                            <a class="portfolio-box" href="assets/img/portfolio/fullsize/bdn2.jpg" title="Centro Cultural Banco do Nordeste">
+                                <img class="img-fluid" src="assets/img/portfolio/thumbnails/bdn2.jpg" alt="..." />
                                 <div class="portfolio-box-caption p-3">
                                     <div class="project-category text-white-50">Cultural</div>
                                     <div class="project-name">Centro Cultural Banco do Nordeste</div>

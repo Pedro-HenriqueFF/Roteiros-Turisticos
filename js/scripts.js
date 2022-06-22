@@ -723,6 +723,7 @@ window.addEventListener('DOMContentLoaded', event => {
       MENULEFT: 'dropdown-menu-left',
       // to-do: replace with more advanced template/customization options
       BUTTONCLASS: 'btn-default',
+      FORMCONTROL: 'form-floating',
       POPOVERHEADER: 'popover-title',
       ICONBASE: 'glyphicon',
       TICKICON: 'glyphicon-ok'

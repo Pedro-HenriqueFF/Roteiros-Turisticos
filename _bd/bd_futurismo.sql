@@ -1,11 +1,23 @@
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
 CREATE DATABASE futurismo;
 USE futurismo;
+
+CREATE TABLE `pessoa_notificacao` (
+  `id_pessoa_notif` int(11) NOT NULL,
+  `nome_pessoa_notif` tinytext NOT NULL,
+  `email_pessoa_notif` tinytext NOT NULL,
+  `sugestao_notif` tinytext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8 COLLATE=utf8_swedish_ci;
 
 CREATE TABLE `pessoas` (
   `id_pessoa` int(11) NOT NULL,
   `nome_pessoa` tinytext NOT NULL,
   `email_pessoa` tinytext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8 COLLATE=utf8_swedish_ci;
 
 CREATE TABLE `sugestoes` (
   `id_sugestao` int(11) NOT NULL,
@@ -13,7 +25,7 @@ CREATE TABLE `sugestoes` (
   `nome_local` tinytext NOT NULL,
   `tipo_local` tinytext NOT NULL,
   `texto_sugestao` tinytext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8 COLLATE=utf8_swedish_ci;
 
 ALTER TABLE `pessoas`
   ADD PRIMARY KEY (`id_pessoa`);

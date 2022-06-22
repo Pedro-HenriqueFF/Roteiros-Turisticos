@@ -45,11 +45,17 @@
             if (isset($_POST['nomeNotif']) && isset($_POST['emailNotif']) && isset($_POST['tipoNotif'])){
 
                 $mysqli = new MySQL();
-                $nome = $mysqli->scape($_POST['nome-notif']);
-                $email = $mysqli->scape($_POST['email-notif']);
-                $tipo = $mysqli->scape($_POST['tipo-notif']);
+                $nome = $mysqli->scape($_POST['nomeNotif']);
+                $email = $mysqli->scape($_POST['emailNotif']);
+                $tipo = "";
+                foreach ($_POST['tipoNotif'] as $valor){
+                    if ($tipo == "" )
+                        $tipo = $valor;
+                    else
+                        $tipo = $tipo.",".$valor;
+                }
 
-                $sql_code = "INSERT INTO pessoa_notificacao (`nome_pessoa_notif`, `email_pessoa_notif`, `sugestao_notif`)
+                $sql_code = "INSERT INTO pessoa_notificacao (`nome_pessoa_notif`, `email_pessoa_notif`, `tipo_notif`)
                                  VALUES ('$nome', '$email', '$tipo')";
                 $mysqli->executar($sql_code);
 

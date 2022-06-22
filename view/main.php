@@ -155,7 +155,7 @@
                                         <label for="email">Endereço de Email</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <select class="selectpicker form-control" multiple>
+                                        <select class="selectpicker form-control" name="tipoNotif[]" multiple>
                                             <option value="Religioso">Religioso</option>
                                             <option value="Artesanal">Artesanal</option>
                                             <option value="Musical">Musical</option>

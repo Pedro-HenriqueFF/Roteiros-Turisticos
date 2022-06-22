@@ -24,7 +24,7 @@
             }
         }
 
-        public function busca($sql_code){
+        public function executar($sql_code){
             try{
                 $sql_query = $this->banco->query($sql_code);
                 return $sql_query;

@@ -18,25 +18,41 @@
                     $sugestao = null;
                 
                 $sql_code = "SELECT id_pessoa as id FROM pessoas WHERE nome_pessoa = '$nome' AND email_pessoa = '$email'";
-                $sql_query = $mysqli->busca($sql_code);
+                $sql_query = $mysqli->executar($sql_code);
                 $sql_query_qrd = $sql_query->num_rows;
                 if ($sql_query_qrd == 1){
                     $id_pessoa = $sql_query->fetch_assoc()['id'];
                     $sql_code = "INSERT INTO sugestoes (`get_id_pessoa`, `nome_local`, `tipo_local`, `texto_sugestao`)
                                  VALUES ('$id_pessoa', '$local', '$tipo', '$sugestao')";
-                    $mysqli->busca($sql_code);
+                    $mysqli->executar($sql_code);
                 }
                 else{
                     $sql_code = "INSERT INTO pessoas (`nome_pessoa`, `email_pessoa`) VALUES ('$nome', '$email')";
-                    $mysqli->busca($sql_code);
+                    $mysqli->executar($sql_code);
                     $sql_code = "SELECT id_pessoa as id FROM pessoas WHERE nome_pessoa = '$nome' AND email_pessoa = '$email'";
-                    $sql_query = $mysqli->busca($sql_code);
+                    $sql_query = $mysqli->executar($sql_code);
                     $id_pessoa = $sql_query->fetch_assoc()['id'];
                     $sql_code = "INSERT INTO sugestoes (`get_id_pessoa`, `nome_local`, `tipo_local`, `texto_sugestao`)
                                  VALUES ('$id_pessoa', '$local', '$tipo', '$sugestao')";
-                    $mysqli->busca($sql_code);
+                    $mysqli->executar($sql_code);
 
                 }
+                unset($mysqli);
+            }
+        }
+
+        public function notificacao(){
+            if (isset($_POST['nomeNotif']) && isset($_POST['emailNotif']) && isset($_POST['tipoNotif'])){
+
+                $mysqli = new MySQL();
+                $nome = $mysqli->scape($_POST['nome-notif']);
+                $email = $mysqli->scape($_POST['email-notif']);
+                $tipo = $mysqli->scape($_POST['tipo-notif']);
+
+                $sql_code = "INSERT INTO pessoa_notificacao (`nome_pessoa_notif`, `email_pessoa_notif`, `sugestao_notif`)
+                                 VALUES ('$nome', '$email', '$tipo')";
+                $mysqli->executar($sql_code);
+
                 unset($mysqli);
             }
         }

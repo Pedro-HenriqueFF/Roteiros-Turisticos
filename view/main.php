@@ -119,8 +119,8 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/bdn.jpg" title="Centro Cultural Banco do Nordeste">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/bdn.jpg" alt="..." />
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/bdn2.jpg" title="Centro Cultural Banco do Nordeste">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/bdn2.jpg" alt="..." />
                             <div class="portfolio-box-caption p-3">
                                 <div class="project-category text-white-50">Cultural</div>
                                 <div class="project-name">Centro Cultural Banco do Nordeste</div>
@@ -136,7 +136,7 @@
 			    <h2 class="mb-4">Receba nossas novidades e atualizações em seu email</h2>
 			    <a href="" class="btn btn-light btn-xl" data-bs-toggle="modal" data-bs-target="#formModal">Quero receber!</a>
                 <!-- Modal -->
-                <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal fade" id="formModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
                     <div class="modal-dialog text-black">
                         <div class="modal-content">
                             <form id="notificationForm" action="" method="post" accept-charset="utf-8" autocomplete="on" enctype="multipart/form-data">
@@ -155,7 +155,11 @@
                                         <label for="email">Endereço de Email</label>
                                     </div>
                                     <div class="form-floating mb-3">
+<<<<<<< HEAD
                                         <select class="selectpicker form-control" name="tipoNotif[]" multiple>
+=======
+                                        <select class="selectpicker form-control" name="tipoNotif" id="type" type="typelist" required multiple>
+>>>>>>> 63497d8851256e05eaf58c12350e4e19bfd1a48b
                                             <option value="Religioso">Religioso</option>
                                             <option value="Artesanal">Artesanal</option>
                                             <option value="Musical">Musical</option>
@@ -204,19 +208,18 @@
                             </div>  
                             <!-- Local type input-->
                             <div class="form-floating mb-3">
-                                <select class="form-control" name="tipo" id="type" name="typelist" form="contactForm">
-                                    <option value="" data-default disabled selected></option>
-                                    <option value="Religioso">Religioso</option>
-                                    <option value="Artesanal">Artesanal</option>
-                                    <option value="Musical">Musical</option>
-                                    <option value="Esportivo">Esportivo</option>
-                                </select>
+                                    <select class="selectpicker form-control" name="tipo" id="type" type="typelist" required multiple>
+                                        <option value="Religioso">Religioso</option>
+                                        <option value="Artesanal">Artesanal</option>
+                                        <option value="Musical">Musical</option>
+                                        <option value="Esportivo">Esportivo</option>
+                                    </select>
                                 <label for="type">Tipo do Local</label>
                             </div>  
                             <!-- Message input-->
                             <div class="form-floating mb-3">
                                 <textarea class="form-control" name="sugestao" id="message" type="text" style="height: 10rem"></textarea>
-                                <label for="message">Sugestão</label>
+                                <label for="message">Nos diga mais sobre esse local (Opcional)</label>
                             </div>
                             <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">Enviar</button></div>
                         </form>

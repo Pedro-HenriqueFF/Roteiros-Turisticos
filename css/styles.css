@@ -11670,6 +11670,7 @@ select.selectpicker {
   z-index: 1060;
 }
 .bootstrap-select .dropdown-toggle .filter-option {
+  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
   position: static;
   top: 0;
   left: 0;
@@ -11684,6 +11685,7 @@ select.selectpicker {
           flex: 0 1 auto;
 }
 .bs3.bootstrap-select .dropdown-toggle .filter-option {
+  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
   padding-right: inherit;
 }
 .input-group .bs3-has-addon.bootstrap-select .dropdown-toggle .filter-option {
@@ -11697,6 +11699,7 @@ select.selectpicker {
   padding-right: inherit;
 }
 .bootstrap-select .dropdown-toggle .filter-option-inner-inner {
+  font-family: "Merriweather", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
   overflow: hidden;
 }
 .bootstrap-select .dropdown-toggle .filter-expand {

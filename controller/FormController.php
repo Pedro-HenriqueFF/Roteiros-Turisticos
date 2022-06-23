@@ -47,18 +47,30 @@
                 $mysqli = new MySQL();
                 $nome = $mysqli->scape($_POST['nomeNotif']);
                 $email = $mysqli->scape($_POST['emailNotif']);
-                $tipo = "";
-                foreach ($_POST['tipoNotif'] as $valor){
-                    if ($tipo == "" )
-                        $tipo = $valor;
-                    else
-                        $tipo = $tipo.",".$valor;
+                $tipo1 = $_POST['tipoNotif'][0];
+                $tipo2 = $_POST['tipoNotif'][1];
+                $tipo3 = $_POST['tipoNotif'][2];
+
+                $sql_code = "SELECT id_pessoa as id FROM pessoas WHERE nome_pessoa = '$nome' AND email_pessoa = '$email'";
+                $sql_query = $mysqli->executar($sql_code);
+                $sql_query_qrd = $sql_query->num_rows;
+                if ($sql_query_qrd == 1){
+                    $id_pessoa = $sql_query->fetch_assoc()['id'];
+                    $sql_code = "INSERT INTO notificacao (`get_id_pessoa`, `get_id_genero_1`, `get_id_genero_2`, `get_id_genero_3`)
+                                 VALUES ('$id_pessoa', '$tipo1', '$tipo2', '$tipo3')";
+                    $mysqli->executar($sql_code);
                 }
+                else{
+                    $sql_code = "INSERT INTO pessoas (`nome_pessoa`, `email_pessoa`) VALUES ('$nome', '$email')";
+                    $mysqli->executar($sql_code);
+                    $sql_code = "SELECT id_pessoa as id FROM pessoas WHERE nome_pessoa = '$nome' AND email_pessoa = '$email'";
+                    $sql_query = $mysqli->executar($sql_code);
+                    $id_pessoa = $sql_query->fetch_assoc()['id'];
+                    $sql_code = "INSERT INTO notificacao (`get_id_pessoa`, `get_id_genero_1`, `get_id_genero_2`, `get_id_genero_3`)
+                                 VALUES ('$id_pessoa', '$tipo1', '$tipo2', '$tipo3')";
+                    $mysqli->executar($sql_code);
 
-                $sql_code = "INSERT INTO pessoa_notificacao (`nome_pessoa_notif`, `email_pessoa_notif`, `tipo_notif`)
-                                 VALUES ('$nome', '$email', '$tipo')";
-                $mysqli->executar($sql_code);
-
+                }
                 unset($mysqli);
             }
         }

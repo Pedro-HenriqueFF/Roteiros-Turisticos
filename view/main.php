@@ -155,15 +155,18 @@
                                         <label for="email">Endereço de Email</label>
                                     </div>
                                     <div class="form-floating mb-3">
-<<<<<<< HEAD
-                                        <select class="selectpicker form-control" name="tipoNotif[]" multiple>
-=======
-                                        <select class="selectpicker form-control" name="tipoNotif" id="type" type="typelist" required multiple>
->>>>>>> 63497d8851256e05eaf58c12350e4e19bfd1a48b
-                                            <option value="Religioso">Religioso</option>
-                                            <option value="Artesanal">Artesanal</option>
-                                            <option value="Musical">Musical</option>
-                                            <option value="Esportivo">Esportivo</option>
+                                        <select class="selectpicker form-control" name="tipoNotif[]" id="type" type="typelist" required multiple>
+                                            <option value="1">Religioso</option>
+                                            <option value="2">Artesanal</option>
+                                            <option value="3">Cultural</option>
+                                            <option value="4">Histórico</option>
+                                            <option value="5">Lazer</option>
+                                            <option value="6">Ecológico</option>
+                                            <option value="7">Aventura</option>
+                                            <option value="8">Aquático</option>
+                                            <option value="9">Comércio</option>
+                                            <option value="10">Esportivo</option>
+                                            <option value="11">Científico</option>
                                         </select>
                                         <label for="type">Tipo do Local</label>
                                     </div>  
@@ -209,10 +212,17 @@
                             <!-- Local type input-->
                             <div class="form-floating mb-3">
                                     <select class="selectpicker form-control" name="tipo" id="type" type="typelist" required multiple>
-                                        <option value="Religioso">Religioso</option>
-                                        <option value="Artesanal">Artesanal</option>
-                                        <option value="Musical">Musical</option>
-                                        <option value="Esportivo">Esportivo</option>
+                                        <option value="1">Religioso</option>
+                                        <option value="2">Artesanal</option>
+                                        <option value="3">Cultural</option>
+                                        <option value="4">Histórico</option>
+                                        <option value="5">Lazer</option>
+                                        <option value="6">Ecológico</option>
+                                        <option value="7">Aventura</option>
+                                        <option value="8">Aquático</option>
+                                        <option value="9">Comércio</option>
+                                        <option value="10">Esportivo</option>
+                                        <option value="11">Científico</option>
                                     </select>
                                 <label for="type">Tipo do Local</label>
                             </div>  

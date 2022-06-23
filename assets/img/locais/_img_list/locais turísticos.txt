@@ -56,3 +56,7 @@ SELECT notificacao.id_notif as id, pessoas.nome_pessoa as nome, a.nome_genero as
             INNER JOIN genero a ON notificacao.get_id_genero_1 = a.id_genero
 			INNER JOIN genero b ON notificacao.get_id_genero_2 = b.id_genero
             INNER JOIN genero c ON notificacao.get_id_genero_3 = c.id_genero
+
+INSERT INTO locais (get_id_genero_1, get_id_genero_2, get_id_genero_3, nome_local, cidade_local, endereco_local, valor_local, 
+horario_local, descricao_local, pathing_local, inclusivo_local) VALUES (10, NULL, NULL, 'Estádio Mauro Sampaio', 'Juazeiro do Norte',
+'Avenida Presidente Castelo Branco, 4464 - Pirajá', 'R$ 20,00', '21:00 até 23:00', 'O lugar onde tem jogo', '/assets/img/locais/Estadio Mauro Sampaio/', '1');

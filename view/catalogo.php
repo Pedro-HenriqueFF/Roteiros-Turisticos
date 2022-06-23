@@ -1,4 +1,7 @@
 <?php
+    require_once(PATH_CONTROLLER . "CatalogoController.php");
+    $valores = (new Catalogo)->carregarCatalogo();
+    #die(BASE_URL.$valores[0]['pasta'].$valores[0]['nome'].'_01.jpg');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,6 +56,19 @@
             <div id="portfolio">
                 <div class="container-fluid p-5">
                     <div class="row g-0">
+                        <?php
+                            for($i=0; $i<50; $i++){
+                                ?>
+                                <div class="col-lg-4 col-sm-6 p-4 align-self-center">
+                                    <a class="portfolio-box" href="<?php echo BASE_URL.$valores[$i%2]['pasta'].'_02.jpg'?>" title="<?php echo $valores[$i%2]['nome']?>">
+                                        <img class="img-fluid" src="<?php echo BASE_URL.$valores[$i%2]['pasta'].'_01.jpg'?>" alt="..." />
+                                    </a>
+                                    <div class="project-name text-center pt-2"><?php echo $valores[$i%2]['nome']?></div>
+                                </div>
+                                <?php
+                            }
+                        ?>
+                        <!--
                         <div class="col-lg-4 col-sm-6 p-4 align-self-center">
                             <a class="portfolio-box" href="assets/img/portfolio/fullsize/padim.jpg" title="Estátua do Padre Cícero">
                                 <img class="img-fluid" src="assets/img/portfolio/thumbnails/padim.jpg" alt="..." />
@@ -104,6 +120,7 @@
                                 </div>
                             </a>
                         </div>
+                        -->
                     </div>
                 </div>
             </div>

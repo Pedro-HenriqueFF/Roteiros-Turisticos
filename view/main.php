@@ -155,6 +155,7 @@
                                         <label for="email">Endereço de Email</label>
                                     </div>
                                     <div class="form-floating mb-3">
+<<<<<<< Updated upstream
                                         <select class="selectpicker form-control" name="tipoNotif[]" id="type" type="typelist" required multiple>
                                             <option value="1">Religioso</option>
                                             <option value="2">Artesanal</option>
@@ -167,6 +168,13 @@
                                             <option value="9">Comércio</option>
                                             <option value="10">Esportivo</option>
                                             <option value="11">Científico</option>
+=======
+                                        <select class="selectpicker form-control" name="tipoNotif[]" multiple>
+                                            <option value="Religioso">Religioso</option>
+                                            <option value="Artesanal">Artesanal</option>
+                                            <option value="Musical">Musical</option>
+                                            <option value="Esportivo">Esportivo</option>
+>>>>>>> Stashed changes
                                         </select>
                                         <label for="type">Tipo do Local</label>
                                     </div>  

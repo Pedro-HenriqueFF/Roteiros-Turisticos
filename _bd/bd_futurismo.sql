@@ -19,7 +19,6 @@ CREATE TABLE `pessoas` (
 
 CREATE TABLE `locais` (
   `id_local` int(11) NOT NULL,
-  `get_id_pessoa` int(11) NOT NULL,
   `get_id_genero_1` int(11) NOT NULL,
   `get_id_genero_2` int(11),
   `get_id_genero_3` int(11),
@@ -29,6 +28,7 @@ CREATE TABLE `locais` (
   `valor_local` tinytext NOT NULL,
   `horario_local` tinytext NOT NULL,
   `descricao_local` tinytext NOT NULL,
+  `pathing_local` tinytext NOT NULL,
   `inclusivo_local` char(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -80,24 +80,6 @@ ALTER TABLE `notificacao`
 ALTER TABLE `sugestoes`
   MODIFY `id_sugestao` int(11) NOT NULL AUTO_INCREMENT;
 
-ALTER TABLE `locais`
-  ADD CONSTRAINT `locais_ibfk_1` FOREIGN KEY (`get_id_pessoa`) REFERENCES `pessoas` (`id_pessoa`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `locais_ibfk_2` FOREIGN KEY (`get_id_genero_1`) REFERENCES `genero` (`id_genero`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `locais_ibfk_3` FOREIGN KEY (`get_id_genero_2`) REFERENCES `genero` (`id_genero`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `locais_ibfk_4` FOREIGN KEY (`get_id_genero_3`) REFERENCES `genero` (`id_genero`) ON DELETE CASCADE ON UPDATE CASCADE;
-
-ALTER TABLE `notificacao`
-  ADD CONSTRAINT `notificacao_ibfk_1` FOREIGN KEY (`get_id_pessoa`) REFERENCES `pessoas` (`id_pessoa`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `notificacao_ibfk_2` FOREIGN KEY (`get_id_genero_1`) REFERENCES `genero` (`id_genero`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `notificacao_ibfk_3` FOREIGN KEY (`get_id_genero_2`) REFERENCES `genero` (`id_genero`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `notificacao_ibfk_4` FOREIGN KEY (`get_id_genero_3`) REFERENCES `genero` (`id_genero`) ON DELETE CASCADE ON UPDATE CASCADE;
-
-ALTER TABLE `sugestoes`
-  ADD CONSTRAINT `sugestoes_ibfk_1` FOREIGN KEY (`get_id_pessoa`) REFERENCES `pessoas` (`id_pessoa`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `sugestoes_ibfk_2` FOREIGN KEY (`get_id_genero_1`) REFERENCES `genero` (`id_genero`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `sugestoes_ibfk_3` FOREIGN KEY (`get_id_genero_2`) REFERENCES `genero` (`id_genero`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `sugestoes_ibfk_4` FOREIGN KEY (`get_id_genero_3`) REFERENCES `genero` (`id_genero`) ON DELETE CASCADE ON UPDATE CASCADE;
-
 INSERT INTO genero (nome_genero) VALUES
   ('Religioso'),
   ('Artesanal'),
@@ -110,3 +92,20 @@ INSERT INTO genero (nome_genero) VALUES
   ('Comércio'),
   ('Esportivo'),
   ('Científico');
+
+ALTER TABLE `locais`
+  ADD CONSTRAINT `locais_ibfk_1` FOREIGN KEY (`get_id_genero_1`) REFERENCES `genero` (`id_genero`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `locais_ibfk_2` FOREIGN KEY (`get_id_genero_2`) REFERENCES `genero` (`id_genero`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `locais_ibfk_3` FOREIGN KEY (`get_id_genero_3`) REFERENCES `genero` (`id_genero`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+ALTER TABLE `notificacao`
+  ADD CONSTRAINT `notificacao_ibfk_1` FOREIGN KEY (`get_id_pessoa`) REFERENCES `pessoas` (`id_pessoa`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `notificacao_ibfk_2` FOREIGN KEY (`get_id_genero_1`) REFERENCES `genero` (`id_genero`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `notificacao_ibfk_3` FOREIGN KEY (`get_id_genero_2`) REFERENCES `genero` (`id_genero`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `notificacao_ibfk_4` FOREIGN KEY (`get_id_genero_3`) REFERENCES `genero` (`id_genero`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+ALTER TABLE `sugestoes`
+  ADD CONSTRAINT `sugestoes_ibfk_1` FOREIGN KEY (`get_id_pessoa`) REFERENCES `pessoas` (`id_pessoa`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `sugestoes_ibfk_2` FOREIGN KEY (`get_id_genero_1`) REFERENCES `genero` (`id_genero`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `sugestoes_ibfk_3` FOREIGN KEY (`get_id_genero_2`) REFERENCES `genero` (`id_genero`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `sugestoes_ibfk_4` FOREIGN KEY (`get_id_genero_3`) REFERENCES `genero` (`id_genero`) ON DELETE CASCADE ON UPDATE CASCADE;

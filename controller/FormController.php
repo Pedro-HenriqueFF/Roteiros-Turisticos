@@ -5,12 +5,12 @@
     }
     class Form{
         public function sugestao(){
-            if (isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['local']) && isset($_POST['tipo'])){
+            if (isset($_POST['nome_suges']) && isset($_POST['email_suges']) && isset($_POST['local_suges']) && isset($_POST['tipo_suges'])){
 
                 $mysqli = new MySQL();
-                $nome = $mysqli->scape($_POST['nome']);
-                $email = $mysqli->scape($_POST['email']);
-                $local = $mysqli->scape($_POST['local']);
+                $nome = $mysqli->scape($_POST['nome_suges']);
+                $email = $mysqli->scape($_POST['email_suges']);
+                $local = $mysqli->scape($_POST['local_suges']);
                 $tipo = $mysqli->scape($_POST['tipo']);
                 if (isset($_POST['sugestao']))
                     $sugestao = $mysqli->scape($_POST['sugestao']);

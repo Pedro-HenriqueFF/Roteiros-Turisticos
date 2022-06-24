@@ -11947,3 +11947,7 @@ select.selectpicker {
   float: none;
 }
 /*# sourceMappingURL=bootstrap-select.css.map */
+/* Classes criadas manualmete */
+.hide{
+  display: none;
+}

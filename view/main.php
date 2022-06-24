@@ -23,6 +23,7 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="<?php echo BASE_URL; ?>/css/styles.css" rel="stylesheet" />
+
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -146,38 +147,71 @@
                                 <div class="modal-body text-black">
                                     <!-- Name input-->
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" name="nomeNotif" id="name" type="text" required/>
+                                        <input class="form-control" name="nome_notif" id="name" type="text" required/>
                                         <label for="name">Nome Completo</label>
                                     </div>
                                     <!-- Email address input-->
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" name="emailNotif" id="email" type="email" required/>
+                                        <input class="form-control" name="email_notif" id="email" type="email" required/>
                                         <label for="email">Endereço de Email</label>
                                     </div>
-                                    <div class="form-floating mb-3">
-<<<<<<< Updated upstream
-                                        <select class="selectpicker form-control" name="tipoNotif[]" id="type" type="typelist" required multiple>
-                                            <option value="1">Religioso</option>
-                                            <option value="2">Artesanal</option>
-                                            <option value="3">Cultural</option>
-                                            <option value="4">Histórico</option>
-                                            <option value="5">Lazer</option>
-                                            <option value="6">Ecológico</option>
-                                            <option value="7">Aventura</option>
-                                            <option value="8">Aquático</option>
-                                            <option value="9">Comércio</option>
-                                            <option value="10">Esportivo</option>
-                                            <option value="11">Científico</option>
-=======
-                                        <select class="selectpicker form-control" name="tipoNotif[]" multiple>
-                                            <option value="Religioso">Religioso</option>
-                                            <option value="Artesanal">Artesanal</option>
-                                            <option value="Musical">Musical</option>
-                                            <option value="Esportivo">Esportivo</option>
->>>>>>> Stashed changes
-                                        </select>
-                                        <label for="type">Tipo do Local</label>
-                                    </div>  
+                                    <div>
+                                        <div id="div_1_notif" class="form-floating mb-3">
+                                                <select class="form-control" name="tipo_notif_1" type="typelist" required>
+                                                    <option value="" data-default disabled selected></option>
+                                                    <option value="1">Religioso</option>
+                                                    <option value="2">Artesanal</option>
+                                                    <option value="3">Cultural</option>
+                                                    <option value="4">Histórico</option>
+                                                    <option value="5">Lazer</option>
+                                                    <option value="6">Ecológico</option>
+                                                    <option value="7">Aventura</option>
+                                                    <option value="8">Aquático</option>
+                                                    <option value="9">Comércio</option>
+                                                    <option value="10">Esportivo</option>
+                                                    <option value="11">Científico</option>
+                                                </select>
+                                            <label for="type">Tipo do Local</label>
+                                        </div>
+                                        <div id="div_2_notif" class="form-floating mb-3 hide">
+                                                <select class="form-control" name="tipo_notif_2" type="typelist">
+                                                    <option value="null" data-default selected></option>
+                                                    <option value="1">Religioso</option>
+                                                    <option value="2">Artesanal</option>
+                                                    <option value="3">Cultural</option>
+                                                    <option value="4">Histórico</option>
+                                                    <option value="5">Lazer</option>
+                                                    <option value="6">Ecológico</option>
+                                                    <option value="7">Aventura</option>
+                                                    <option value="8">Aquático</option>
+                                                    <option value="9">Comércio</option>
+                                                    <option value="10">Esportivo</option>
+                                                    <option value="11">Científico</option>
+                                                </select>
+                                            <label for="type">Tipo do Local (Opcional)</label>
+                                        </div>  
+                                        <div id="div_3_notif" class="form-floating mb-3 hide">
+                                                <select class="form-control" name="tipo_notif_3" type="typelist">
+                                                    <option value="null" data-default selected></option>
+                                                    <option value="1">Religioso</option>
+                                                    <option value="2">Artesanal</option>
+                                                    <option value="3">Cultural</option>
+                                                    <option value="4">Histórico</option>
+                                                    <option value="5">Lazer</option>
+                                                    <option value="6">Ecológico</option>
+                                                    <option value="7">Aventura</option>
+                                                    <option value="8">Aquático</option>
+                                                    <option value="9">Comércio</option>
+                                                    <option value="10">Esportivo</option>
+                                                    <option value="11">Científico</option>
+                                                </select>
+                                            <label for="type">Tipo do Local (Opcional)</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <button id="btn_plus_notif" type="button" class="btn btn-outline-primary btn-sm">+</button>
+                                            <button id="btn_minor_notif" type="button" class="btn btn-outline-danger btn-sm hide">-</button>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="modal-footer">
                                     <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Cancelar</button>
@@ -204,39 +238,80 @@
                         <form id="contactForm" action="" method="post" accept-charset="utf-8" autocomplete="on" enctype="multipart/form-data">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" name="nome" id="name" type="text" required/>
+                                <input class="form-control" name="name_suges" type="text" required/>
                                 <label for="name">Nome Completo</label>
                             </div>
                             <!-- Email address input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" name="email" id="email" type="email" required/>
+                                <input class="form-control" name="email_suges" type="email" required/>
                                 <label for="email">Endereço de Email</label>
                             </div>
                             <!-- Local name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" name="local" id="local" type="text" required/>
+                                <input class="form-control" name="local_suges" type="text" required/>
                                 <label for="local">Nome do Local</label>
                             </div>  
                             <!-- Local type input-->
-                            <div class="form-floating mb-3">
-                                    <select class="selectpicker form-control" name="tipo" id="type" type="typelist" required multiple>
-                                        <option value="1">Religioso</option>
-                                        <option value="2">Artesanal</option>
-                                        <option value="3">Cultural</option>
-                                        <option value="4">Histórico</option>
-                                        <option value="5">Lazer</option>
-                                        <option value="6">Ecológico</option>
-                                        <option value="7">Aventura</option>
-                                        <option value="8">Aquático</option>
-                                        <option value="9">Comércio</option>
-                                        <option value="10">Esportivo</option>
-                                        <option value="11">Científico</option>
-                                    </select>
-                                <label for="type">Tipo do Local</label>
-                            </div>  
+                            <div>
+                                <div id="div_1_sugest" class="form-floating mb-3">
+                                        <select class="form-control" name="tipo_suges_1" type="typelist" required>
+                                            <option value="" data-default disabled selected></option>
+                                            <option value="1">Religioso</option>
+                                            <option value="2">Artesanal</option>
+                                            <option value="3">Cultural</option>
+                                            <option value="4">Histórico</option>
+                                            <option value="5">Lazer</option>
+                                            <option value="6">Ecológico</option>
+                                            <option value="7">Aventura</option>
+                                            <option value="8">Aquático</option>
+                                            <option value="9">Comércio</option>
+                                            <option value="10">Esportivo</option>
+                                            <option value="11">Científico</option>
+                                        </select>
+                                    <label for="type">Tipo do Local</label>
+                                </div>
+                                <div id="div_2_sugest" class="form-floating mb-3 hide">
+                                        <select class="form-control" name="tipo_suges_2" type="typelist">
+                                            <option value="null" data-default selected></option>
+                                            <option value="1">Religioso</option>
+                                            <option value="2">Artesanal</option>
+                                            <option value="3">Cultural</option>
+                                            <option value="4">Histórico</option>
+                                            <option value="5">Lazer</option>
+                                            <option value="6">Ecológico</option>
+                                            <option value="7">Aventura</option>
+                                            <option value="8">Aquático</option>
+                                            <option value="9">Comércio</option>
+                                            <option value="10">Esportivo</option>
+                                            <option value="11">Científico</option>
+                                        </select>
+                                    <label for="type">Tipo do Local (Opcional)</label>
+                                </div>  
+                                <div id="div_3_sugest" class="form-floating mb-3 hide">
+                                        <select class="form-control" name="tipo_suges_3" type="typelist">
+                                            <option value="null" data-default selected></option>
+                                            <option value="1">Religioso</option>
+                                            <option value="2">Artesanal</option>
+                                            <option value="3">Cultural</option>
+                                            <option value="4">Histórico</option>
+                                            <option value="5">Lazer</option>
+                                            <option value="6">Ecológico</option>
+                                            <option value="7">Aventura</option>
+                                            <option value="8">Aquático</option>
+                                            <option value="9">Comércio</option>
+                                            <option value="10">Esportivo</option>
+                                            <option value="11">Científico</option>
+                                        </select>
+                                    <label for="type">Tipo do Local (Opcional)</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <button id="btn_plus_sugest" type="button" class="btn btn-outline-primary btn-sm">+</button>
+                                    <button id="btn_minor_sugest" type="button" class="btn btn-outline-danger btn-sm hide">-</button>
+                                </div>
+                            </div>
                             <!-- Message input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" name="sugestao" id="message" type="text" style="height: 10rem"></textarea>
+                                <textarea class="form-control" name="sugestao_suges" type="text" style="height: 10rem"></textarea>
                                 <label for="message">Nos diga mais sobre esse local (Opcional)</label>
                             </div>
                             <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">Enviar</button></div>
@@ -299,14 +374,14 @@
                 </div>
             </div>
         </footer>
+        <!-- JQuery-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- SimpleLightbox plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-        <!-- Select Multiple-->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <script src="<?php echo BASE_URL; ?>/js/scripts.js"></script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->

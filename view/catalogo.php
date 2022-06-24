@@ -61,7 +61,7 @@
                                 ?>
                                 <div class="col-lg-4 col-sm-6 p-4 align-self-center">
                                     <a class="portfolio-box" href="<?php echo BASE_URL.$valores[$i%2]['pasta'].'_02.jpg'?>" title="<?php echo $valores[$i%2]['nome']?>">
-                                        <img class="img-fluid" src="<?php echo BASE_URL.$valores[$i%2]['pasta'].'_01.jpg'?>" alt="..." />
+                                        <img class="img-fluid border border-4 rounded" src="<?php echo BASE_URL.$valores[$i%2]['pasta'].'_01.jpg'?>" alt="..." />
                                     </a>
                                     <div class="project-name text-center pt-2"><?php echo $valores[$i%2]['nome']?></div>
                                 </div>

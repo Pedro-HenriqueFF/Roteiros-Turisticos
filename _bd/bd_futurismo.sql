@@ -60,7 +60,7 @@ CREATE TABLE `sugestoes` (
   `get_id_genero_1` int(11) NOT NULL,
   `get_id_genero_2` int(11),
   `get_id_genero_3` int(11),
-  `texto_sugestao` varchar(255) NOT NULL
+  `texto_sugestao` varchar(255)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 ALTER TABLE `generos`

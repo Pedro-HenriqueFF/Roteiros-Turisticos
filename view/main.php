@@ -238,23 +238,23 @@
                         <form id="contactForm" action="" method="post" accept-charset="utf-8" autocomplete="on" enctype="multipart/form-data">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" name="name_suges" type="text" required/>
+                                <input class="form-control" name="nome_sugest" type="text" required/>
                                 <label for="name">Nome Completo</label>
                             </div>
                             <!-- Email address input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" name="email_suges" type="email" required/>
+                                <input class="form-control" name="email_sugest" type="email" required/>
                                 <label for="email">Endereço de Email</label>
                             </div>
                             <!-- Local name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" name="local_suges" type="text" required/>
+                                <input class="form-control" name="local_sugest" type="text" required/>
                                 <label for="local">Nome do Local</label>
                             </div>  
                             <!-- Local type input-->
                             <div>
                                 <div id="div_1_sugest" class="form-floating mb-3">
-                                        <select class="form-control" name="tipo_suges_1" type="typelist" required>
+                                        <select class="form-control" name="tipo_sugest_1" type="typelist" required>
                                             <option value="" data-default disabled selected></option>
                                             <option value="1">Religioso</option>
                                             <option value="2">Artesanal</option>
@@ -271,7 +271,7 @@
                                     <label for="type">Tipo do Local</label>
                                 </div>
                                 <div id="div_2_sugest" class="form-floating mb-3 hide">
-                                        <select class="form-control" name="tipo_suges_2" type="typelist">
+                                        <select class="form-control" name="tipo_sugest_2" type="typelist">
                                             <option value="null" data-default selected></option>
                                             <option value="1">Religioso</option>
                                             <option value="2">Artesanal</option>
@@ -288,7 +288,7 @@
                                     <label for="type">Tipo do Local (Opcional)</label>
                                 </div>  
                                 <div id="div_3_sugest" class="form-floating mb-3 hide">
-                                        <select class="form-control" name="tipo_suges_3" type="typelist">
+                                        <select class="form-control" name="tipo_sugest_3" type="typelist">
                                             <option value="null" data-default selected></option>
                                             <option value="1">Religioso</option>
                                             <option value="2">Artesanal</option>
@@ -311,7 +311,7 @@
                             </div>
                             <!-- Message input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" name="sugestao_suges" type="text" style="height: 10rem"></textarea>
+                                <textarea class="form-control" name="sugestao_sugest" type="text" style="height: 10rem"></textarea>
                                 <label for="message">Nos diga mais sobre esse local (Opcional)</label>
                             </div>
                             <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">Enviar</button></div>

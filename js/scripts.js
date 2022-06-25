@@ -62,7 +62,6 @@ window.addEventListener('DOMContentLoaded', event => {
 
 var btn_plus_sugest = document.getElementById('btn_plus_sugest');
 var btn_minor_sugest = document.getElementById('btn_minor_sugest');
-var div_1_sugest = document.getElementById("div_1_sugest");
 var div_2_sugest = document.getElementById("div_2_sugest");
 var div_3_sugest = document.getElementById("div_3_sugest");
 
@@ -70,7 +69,6 @@ var div_3_sugest = document.getElementById("div_3_sugest");
 
 var btn_plus_notif = document.getElementById('btn_plus_notif');
 var btn_minor_notif = document.getElementById('btn_minor_notif');
-var div_1_notif = document.getElementById("div_1_notif");
 var div_2_notif = document.getElementById("div_2_notif");
 var div_3_notif = document.getElementById("div_3_notif");
 

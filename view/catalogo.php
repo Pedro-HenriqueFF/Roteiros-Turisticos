@@ -1,7 +1,9 @@
 <?php
     require_once(PATH_CONTROLLER . "CatalogoController.php");
-    $valores = (new Catalogo)->carregarCatalogo();
-    #die(BASE_URL.$valores[0]['pasta'].$valores[0]['nome'].'_01.jpg');
+    $catalogo = new Catalogo;
+    $lugares = $catalogo->carregarCatalogo();
+    echo BASE_URL.$lugares[0]['file_path'].'_01.jpg<br>';
+    echo "C:/xampp/htdocs/Futurismo/assets/img/locais/Arena Mauro Sampaio/Arena Mauro Sampaio_01.jpg";
 ?>
         <main>
         <header class="page-section bg-secondary">
@@ -20,13 +22,13 @@
                 <div class="container-fluid p-5">
                     <div class="row g-0">
                         <?php
-                            for($i=0; $i<50; $i++){
+                            for($i = 0; $i < $catalogo->qtdLocais; $i++){
                                 ?>
                                 <div class="col-lg-4 col-sm-6 p-4 align-self-center">
-                                    <a class="portfolio-box" href="<?php echo BASE_URL.$valores[$i%2]['pasta'].'_02.jpg'?>" title="<?php echo $valores[$i%2]['nome']?>">
-                                        <img class="img-fluid border border-4 rounded" src="<?php echo BASE_URL.$valores[$i%2]['pasta'].'_01.jpg'?>" alt="..." />
+                                    <a class="portfolio-box" href="<?php echo BASE_URL.$lugares[$i]['file_path'].'_01.jpg'?>" title="<?php echo $lugares[$i]['nome']?>">
+                                        <img class="img-fluid border border-4 rounded" src="<?php echo BASE_URL.$lugares[$i]['file_path'].'_01.jpg'?>" alt="<?php echo $lugares[$i]['nome']?>" />
                                     </a>
-                                    <div class="project-name text-center pt-2"><?php echo $valores[$i%2]['nome']?></div>
+                                    <div class="project-name text-center pt-2"><?php echo $lugares[$i]['nome']?></div>
                                 </div>
                                 <?php
                             }

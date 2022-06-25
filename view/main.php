@@ -297,26 +297,26 @@
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-lg-4 col-md-6 text-center align-self-center">
                         <div class="mt-5">
-                            <div class="mb-2"><img class="img-thumbnail rounded-circle" src="./assets/img/devs/derley.jfif" alt="derley" width="70%" height="70%"></div>
+                            <div class="mb-2"><img class="img-thumbnail rounded-circle" src="<?php echo BASE_URL; ?>/assets/img/devs/Wanderley.jfif" alt="derley" width="70%" height="70%"></div>
                             <h3 class="text-white h4 mb-2">Wanderley Filho</h3>
                             <p class="text-white mb-0">22 anos | Estudante de Ciência da Computação na UFCA | Mobile Developer</p>
-                            <a href="https://github.com/derleymad" target="_blank"><img class="mt-2" src="./assets/img/logos/github-brands.svg" alt="GitHub" width="7%" height="7%"></a>
+                            <a href="https://github.com/derleymad" target="_blank"><img class="mt-2" src="<?php echo BASE_URL; ?>/assets/img/logos/github-brands.svg" alt="GitHub" width="7%" height="7%"></a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 text-center align-self-center">
                         <div class="mt-5">
-                            <div class="mb-2"><img class="img-thumbnail rounded-circle" src="./assets/img/devs/luska.jfif" alt="derley" width="70%" height="70%"></div>
+                            <div class="mb-2"><img class="img-thumbnail rounded-circle" src="<?php echo BASE_URL; ?>/assets/img/devs/Lucas.jfif" alt="derley" width="70%" height="70%"></div>
                             <h3 class="text-white h4 mb-2">Lucas Lemos</h3>
                             <p class="text-white mb-0">22 anos | Estudante de Ciência da Computação na UFCA | Backend Developer</p>
-                            <a href="https://github.com/lucaslemo" target="_blank"><img class="mt-2" src="./assets/img/logos/github-brands.svg" alt="GitHub" width="7%" height="7%"></a>
+                            <a href="https://github.com/lucaslemo" target="_blank"><img class="mt-2" src="<?php echo BASE_URL; ?>/assets/img/logos/github-brands.svg" alt="GitHub" width="7%" height="7%"></a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 text-center  align-self-center">
                         <div class="mt-5">
-                            <div class="mb-2"><img class="img-thumbnail rounded-circle" src="./assets/img/devs/ph.png" alt="derley" width="70%" height="70%"></div>
+                            <div class="mb-2"><img class="img-thumbnail rounded-circle" src="<?php echo BASE_URL; ?>/assets/img/devs/Pedro.png" alt="derley" width="70%" height="70%"></div>
                             <h3 class="text-white h4 mb-2">Pedro Henrique</h3>
                             <p class="text-white mb-0">20 anos | Estudante de Ciência da Computação na UFCA | Frontend Developer</p>
-                            <a href="https://github.com/Pedro-HenriqueFF" target="_blank"><img class="mt-2" src="./assets/img/logos/github-brands.svg" alt="GitHub" width="7%" height="7%"></a>
+                            <a href="https://github.com/Pedro-HenriqueFF" target="_blank"><img class="mt-2" src="<?php echo BASE_URL; ?>/assets/img/logos/github-brands.svg" alt="GitHub" width="7%" height="7%"></a>
                         </div>
                     </div>
                 </div>

@@ -20,7 +20,7 @@
                                 <div class="text-center mt-4">
                                     <img class="mb-4 img-error" src="<?php echo BASE_URL; ?>/assets/img/logos/error-404.svg"/>
                                     <p class="lead">A URL buscada não foi encontrada em nosso servidor.</p>
-                                    <a href="<?php echo BASE_URL; ?>">
+                                    <a href="javascript:history.back()">
                                         <i class="fas fa-arrow-left me-1"></i>
                                         Voltar
                                     </a>

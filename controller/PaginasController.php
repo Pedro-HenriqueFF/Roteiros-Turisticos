@@ -10,7 +10,9 @@
             }
 
             // Renderiza a pagina requisitada
+            require_once(PATH_VIEW . "header.php"); 
             require_once(PATH_VIEW . "$nomeView.php"); 
+            require_once(PATH_VIEW . "footer.php"); 
         }
     }
 ?>

@@ -22,27 +22,18 @@ CREATE TABLE `cidades` (
   `nome_cidade` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE `enderecos` (
-  `id_endereco` int(11) NOT NULL,
-  `numero_endereco`varchar(255) NOT NULL,
-  `rua_endereco` varchar(255) NOT NULL,
-  `bairro_endereco` varchar(255) NOT NULL,
-  `get_id_cidade` int(11) NOT NULL,
-  `cep_endereco`varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
 CREATE TABLE `locais` (
   `id_local` int(11) NOT NULL,
   `nome_local`varchar(255) NOT NULL,
+  `endereco_local` varchar(255) NOT NULL,
+  `get_id_cidade` int(11) NOT NULL,
   `get_id_genero_1` int(11) NOT NULL,
   `get_id_genero_2` int(11),
   `get_id_genero_3` int(11),
-  `get_id_endereco` int(11) NOT NULL,
   `valor_local` varchar(255) NOT NULL,
   `horario_local` varchar(255) NOT NULL,
   `descricao_local` varchar(255) NOT NULL,
-  `pathing_local` varchar(255) NOT NULL,
-  `inclusivo_local` char(2) NOT NULL
+  `pathing_local` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `notificacoes` (
@@ -71,9 +62,6 @@ ALTER TABLE `pessoas`
 
 ALTER TABLE `cidades`
   ADD PRIMARY KEY (`id_cidade`);
-
-ALTER TABLE `enderecos`
-  ADD PRIMARY KEY (`id_endereco`);
   
   ALTER TABLE `locais`
     ADD PRIMARY KEY (`id_local`);
@@ -92,9 +80,6 @@ ALTER TABLE `pessoas`
 
 ALTER TABLE `cidades`
   MODIFY `id_cidade` int(11) NOT NULL AUTO_INCREMENT;
-
-ALTER TABLE `enderecos`
-  MODIFY `id_endereco` int(11) NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE `locais`
   MODIFY `id_local` int(11) NOT NULL AUTO_INCREMENT;
@@ -129,14 +114,11 @@ INSERT INTO cidades (nome_cidade) VALUES
   ('Nova Olinda'),
   ('Santana do Cariri');
 
-ALTER TABLE `enderecos`
-  ADD CONSTRAINT `enderecos_ibfk_1` FOREIGN KEY (`get_id_cidade`) REFERENCES `cidades` (`id_cidade`) ON DELETE CASCADE ON UPDATE CASCADE;
-
 ALTER TABLE `locais`
   ADD CONSTRAINT `locais_ibfk_1` FOREIGN KEY (`get_id_genero_1`) REFERENCES `generos` (`id_genero`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `locais_ibfk_2` FOREIGN KEY (`get_id_genero_2`) REFERENCES `generos` (`id_genero`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `locais_ibfk_3` FOREIGN KEY (`get_id_genero_3`) REFERENCES `generos` (`id_genero`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `locais_ibfk_4` FOREIGN KEY (`get_id_endereco`) REFERENCES `enderecos` (`id_endereco`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `locais_ibfk_4` FOREIGN KEY (`get_id_cidade`) REFERENCES `cidades` (`id_cidade`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ALTER TABLE `notificacoes`
   ADD CONSTRAINT `notificacoes_ibfk_1` FOREIGN KEY (`get_id_pessoa`) REFERENCES `pessoas` (`id_pessoa`) ON DELETE CASCADE ON UPDATE CASCADE,

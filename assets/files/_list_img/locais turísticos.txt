@@ -58,6 +58,7 @@ Romeirão - Juazeiro do Norte - Esportivo                                       
 7 - Farias Brito
 8 - Nova Olinda
 9 - Santana do Cariri
+10 - Assaré
 
 
 SELECT notificacao.id_notif as id, pessoas.nome_pessoa as nome, a.nome_genero as genero1, b.nome_genero as genero2, c.nome_genero as genero3

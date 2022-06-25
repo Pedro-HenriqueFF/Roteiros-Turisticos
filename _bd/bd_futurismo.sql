@@ -32,7 +32,7 @@ CREATE TABLE `locais` (
   `get_id_genero_3` int(11),
   `valor_local` varchar(255) NOT NULL,
   `horario_local` varchar(255) NOT NULL,
-  `descricao_local` varchar(255) NOT NULL,
+  `descricao_local` tinytext NOT NULL,
   `pathing_local` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -112,7 +112,8 @@ INSERT INTO cidades (nome_cidade) VALUES
   ('Caririaçu'),
   ('Farias Brito'),
   ('Nova Olinda'),
-  ('Santana do Cariri');
+  ('Santana do Cariri'),
+  ('Assaré');
 
 ALTER TABLE `locais`
   ADD CONSTRAINT `locais_ibfk_1` FOREIGN KEY (`get_id_genero_1`) REFERENCES `generos` (`id_genero`) ON DELETE CASCADE ON UPDATE CASCADE,

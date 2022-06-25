@@ -25,7 +25,7 @@
             $mysqli = new MySQL();
             
             # Busca todos os locais no catálogo
-            $sql_code = "SELECT nome_local as nome, pathing_local as file_path FROM locais"; 
+            $sql_code = "SELECT nome_local as nome, endereco_local as endereco, descricao_local as descricao, pathing_local as file_path FROM locais"; 
             $valores = $mysqli->executar($sql_code)->fetch_all(MYSQLI_ASSOC);
             
             # Fecha conexão

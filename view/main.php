@@ -322,4 +322,5 @@
                 </div>
             </div>
         </section>
+        <script src="<?php echo BASE_URL; ?>js/form.js"></script>
         

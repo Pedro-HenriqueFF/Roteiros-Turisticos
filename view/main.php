@@ -3,6 +3,7 @@
     $form = new Form;
     $form->sugestao();
     $form->notificacao();
+    $generos = $form->carregaGeneros();
 ?>
 
         <!-- Masthead-->
@@ -122,51 +123,39 @@
                                         <div id="div_1_notif" class="form-floating mb-3">
                                                 <select class="form-control" name="tipo_notif_1" type="typelist" required>
                                                     <option value="" data-default disabled selected></option>
-                                                    <option value="1">Religioso</option>
-                                                    <option value="2">Artesanal</option>
-                                                    <option value="3">Cultural</option>
-                                                    <option value="4">Histórico</option>
-                                                    <option value="5">Lazer</option>
-                                                    <option value="6">Ecológico</option>
-                                                    <option value="7">Aventura</option>
-                                                    <option value="8">Aquático</option>
-                                                    <option value="9">Comércio</option>
-                                                    <option value="10">Esportivo</option>
-                                                    <option value="11">Científico</option>
+                                                    <?php
+                                                        for ($i = 0; $i < count($generos); $i++){
+                                                            ?>
+                                                            <option value="<?php echo $generos[$i]['id'] ?>"><?php echo $generos[$i]['nome'] ?></option>
+                                                            <?php
+                                                        }
+                                                    ?>
                                                 </select>
                                             <label for="type">Tipo do Local</label>
                                         </div>
                                         <div id="div_2_notif" class="form-floating mb-3 hide">
                                                 <select class="form-control" name="tipo_notif_2" type="typelist">
                                                     <option value="null" data-default selected></option>
-                                                    <option value="1">Religioso</option>
-                                                    <option value="2">Artesanal</option>
-                                                    <option value="3">Cultural</option>
-                                                    <option value="4">Histórico</option>
-                                                    <option value="5">Lazer</option>
-                                                    <option value="6">Ecológico</option>
-                                                    <option value="7">Aventura</option>
-                                                    <option value="8">Aquático</option>
-                                                    <option value="9">Comércio</option>
-                                                    <option value="10">Esportivo</option>
-                                                    <option value="11">Científico</option>
+                                                    <?php
+                                                        for ($i = 0; $i < count($generos); $i++){
+                                                            ?>
+                                                            <option value="<?php echo $generos[$i]['id'] ?>"><?php echo $generos[$i]['nome'] ?></option>
+                                                            <?php
+                                                        }
+                                                    ?>
                                                 </select>
                                             <label for="type">Tipo do Local (Opcional)</label>
                                         </div>  
                                         <div id="div_3_notif" class="form-floating mb-3 hide">
                                                 <select class="form-control" name="tipo_notif_3" type="typelist">
                                                     <option value="null" data-default selected></option>
-                                                    <option value="1">Religioso</option>
-                                                    <option value="2">Artesanal</option>
-                                                    <option value="3">Cultural</option>
-                                                    <option value="4">Histórico</option>
-                                                    <option value="5">Lazer</option>
-                                                    <option value="6">Ecológico</option>
-                                                    <option value="7">Aventura</option>
-                                                    <option value="8">Aquático</option>
-                                                    <option value="9">Comércio</option>
-                                                    <option value="10">Esportivo</option>
-                                                    <option value="11">Científico</option>
+                                                    <?php
+                                                        for ($i = 0; $i < count($generos); $i++){
+                                                            ?>
+                                                            <option value="<?php echo $generos[$i]['id'] ?>"><?php echo $generos[$i]['nome'] ?></option>
+                                                            <?php
+                                                        }
+                                                    ?>
                                                 </select>
                                             <label for="type">Tipo do Local (Opcional)</label>
                                         </div>
@@ -202,12 +191,12 @@
                             <!-- Name input-->
                             <div class="form-floating mb-3">
                                 <input class="form-control" name="nome_sugest" type="text" required/>
-                                <label for="name">Nome Completo</label>
+                                <label for="name">Seu Nome Completo</label>
                             </div>
                             <!-- Email address input-->
                             <div class="form-floating mb-3">
                                 <input class="form-control" name="email_sugest" type="email" required/>
-                                <label for="email">Endereço de Email</label>
+                                <label for="email">Seu Endereço de Email</label>
                             </div>
                             <!-- Local name input-->
                             <div class="form-floating mb-3">
@@ -219,51 +208,39 @@
                                 <div id="div_1_sugest" class="form-floating mb-3">
                                         <select class="form-control" name="tipo_sugest_1" type="typelist" required>
                                             <option value="" data-default disabled selected></option>
-                                            <option value="1">Religioso</option>
-                                            <option value="2">Artesanal</option>
-                                            <option value="3">Cultural</option>
-                                            <option value="4">Histórico</option>
-                                            <option value="5">Lazer</option>
-                                            <option value="6">Ecológico</option>
-                                            <option value="7">Aventura</option>
-                                            <option value="8">Aquático</option>
-                                            <option value="9">Comércio</option>
-                                            <option value="10">Esportivo</option>
-                                            <option value="11">Científico</option>
+                                            <?php
+                                                for ($i = 0; $i < count($generos); $i++){
+                                                    ?>
+                                                    <option value="<?php echo $generos[$i]['id'] ?>"><?php echo $generos[$i]['nome'] ?></option>
+                                                    <?php
+                                                }
+                                            ?>
                                         </select>
                                     <label for="type">Tipo do Local</label>
                                 </div>
                                 <div id="div_2_sugest" class="form-floating mb-3 hide">
                                         <select class="form-control" name="tipo_sugest_2" type="typelist">
                                             <option value="null" data-default selected></option>
-                                            <option value="1">Religioso</option>
-                                            <option value="2">Artesanal</option>
-                                            <option value="3">Cultural</option>
-                                            <option value="4">Histórico</option>
-                                            <option value="5">Lazer</option>
-                                            <option value="6">Ecológico</option>
-                                            <option value="7">Aventura</option>
-                                            <option value="8">Aquático</option>
-                                            <option value="9">Comércio</option>
-                                            <option value="10">Esportivo</option>
-                                            <option value="11">Científico</option>
+                                            <?php
+                                                for ($i = 0; $i < count($generos); $i++){
+                                                    ?>
+                                                    <option value="<?php echo $generos[$i]['id'] ?>"><?php echo $generos[$i]['nome'] ?></option>
+                                                    <?php
+                                                }
+                                            ?>
                                         </select>
                                     <label for="type">Tipo do Local (Opcional)</label>
                                 </div>  
                                 <div id="div_3_sugest" class="form-floating mb-3 hide">
                                         <select class="form-control" name="tipo_sugest_3" type="typelist">
                                             <option value="null" data-default selected></option>
-                                            <option value="1">Religioso</option>
-                                            <option value="2">Artesanal</option>
-                                            <option value="3">Cultural</option>
-                                            <option value="4">Histórico</option>
-                                            <option value="5">Lazer</option>
-                                            <option value="6">Ecológico</option>
-                                            <option value="7">Aventura</option>
-                                            <option value="8">Aquático</option>
-                                            <option value="9">Comércio</option>
-                                            <option value="10">Esportivo</option>
-                                            <option value="11">Científico</option>
+                                            <?php
+                                                for ($i = 0; $i < count($generos); $i++){
+                                                    ?>
+                                                    <option value="<?php echo $generos[$i]['id'] ?>"><?php echo $generos[$i]['nome'] ?></option>
+                                                    <?php
+                                                }
+                                            ?>
                                         </select>
                                     <label for="type">Tipo do Local (Opcional)</label>
                                 </div>

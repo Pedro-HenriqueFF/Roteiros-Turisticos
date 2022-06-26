@@ -7,6 +7,18 @@ use function PHPSTORM_META\type;
         session_start();
     }
     class Form{
+        public function carregaGeneros(){
+            # Cria a conexão com o banco de dados
+            $mysqli = new MySQL();
+
+            # Puxa os generos dos locais
+            $sql_code = "SELECT id_genero as id, nome_genero as nome FROM generos ORDER BY nome_genero ASC";
+            $sql_query = $mysqli->executar($sql_code);
+
+            # retorna os generos
+            return $sql_query->fetch_all(MYSQLI_ASSOC);
+        }
+
         public function sugestao(){
             if (isset($_POST['nome_sugest']) && isset($_POST['email_sugest']) && isset($_POST['local_sugest']) && isset($_POST['tipo_sugest_1'])){
 

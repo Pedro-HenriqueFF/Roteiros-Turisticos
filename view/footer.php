@@ -1,13 +1,24 @@
 <footer class="bg-light">
             <div class="container px-0 px-lg-0">
                 <div class="row gx-4 gx-lg-5">    
-                    <div class="col-lg-4 ms-0 p-0 text-center align-self-center">
+                    <div class="col-lg-3 ms-0 p-0 text-center align-self-center">
                         <div class=""><img class="" src="<?php echo BASE_URL; ?>/assets/img/logos/ufca-logo.png" alt="ufca" width="100%" height="100%"></div>
                     </div>
-                    <div class="col-lg-4 text-center align-self-center">
+                    <div class="col-lg-1 ms-0 p-0 text-center align-self-center">
+                        <div class=""><img class="" src="   <?php echo BASE_URL; ?>/assets/img/logos/logoPi2.png" alt="pi2" width="60%" height="60%"></div>
+                    </div>
+                    <div class="col-lg-1 p-0 text-center align-self-center">
+                    </div>
+                    <div class="col-lg-2 p-0 text-center align-self-center">
                         <div class="small text-center text-muted">Copyright &copy; 2022 - Titan Tech</div>
                     </div>
-                    <div class="col-lg-4 text-center  align-self-center">
+                    <div class="col-lg-1 p-0 text-center align-self-center">
+                    </div>
+                    <div class="col-lg-3 ms-0 p-0 text-center align-self-center">
+                        <div class=""><img class="" src="<?php echo BASE_URL; ?>/assets/img/logos/logoCRIEbranco.png" alt="crie" width="60%" height="60%"></div>
+                    </div>
+                    <div class="col-lg-1 ms-0 p-0 text-center align-self-center">
+                        <div class=""><img class="" src="<?php echo BASE_URL; ?>/assets/img/logos/logoKV.png" alt="kv" width="130%" height="130%"></div>
                     </div>
                 </div>
             </div>

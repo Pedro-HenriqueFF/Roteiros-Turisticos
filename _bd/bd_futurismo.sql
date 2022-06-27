@@ -63,8 +63,8 @@ ALTER TABLE `pessoas`
 ALTER TABLE `cidades`
   ADD PRIMARY KEY (`id_cidade`);
   
-  ALTER TABLE `locais`
-    ADD PRIMARY KEY (`id_local`);
+ALTER TABLE `locais`
+  ADD PRIMARY KEY (`id_local`);
 
 ALTER TABLE `notificacoes`
   ADD PRIMARY KEY (`id_notif`);

@@ -18,7 +18,7 @@
                         <div class=""><img class="" src="<?php echo BASE_URL; ?>/assets/img/logos/logoCRIEbranco.png" alt="crie" width="60%" height="60%"></div>
                     </div>
                     <div class="col-lg-1 ms-0 p-0 text-center align-self-center">
-                        <div class=""><img class="" src="<?php echo BASE_URL; ?>/assets/img/logos/logoKV.png" alt="kv" width="130%" height="130%"></div>
+                        <div class=""><img class="" src="<?php echo BASE_URL; ?>/assets/img/logos/logoKV.png" alt="kv" width="100%" height="100%"></div>
                     </div>
                 </div>
             </div>

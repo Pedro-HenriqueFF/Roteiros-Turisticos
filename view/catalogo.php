@@ -113,8 +113,8 @@
                                 </div>
                             </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button id="salva-roteiro" type="button" class="btn btn-primary">Save changes</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                    <button id="salva-roteiro" type="button" class="btn btn-primary">Salvar Roteiro</button>
                                 </div>
                             </div>
                         </div>

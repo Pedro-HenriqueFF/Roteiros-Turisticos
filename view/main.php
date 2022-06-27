@@ -40,7 +40,7 @@
                 <div class="row g-0">
                     <div class="col-lg-4 col-sm-6">
                         <a class="portfolio-box" href="assets/img/portfolio/fullsize/padim.jpg" title="Estátua do Padre Cícero">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/padim.jpg" alt="..." />
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/padrecicero.jpg" alt="..."/>
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Religioso</div>
                                 <div class="project-name">Estátua do Padre Cícero</div>
@@ -49,7 +49,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <a class="portfolio-box" href="assets/img/portfolio/fullsize/araja.jpg" title="Arajara Park">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/araja.jpg" alt="..." />
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/arajarapark.jpg" alt="..." />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Entretenimento</div>
                                 <div class="project-name">Arajara Park</div>
@@ -58,7 +58,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <a class="portfolio-box" href="assets/img/portfolio/fullsize/museu-paleontologia.png" title="Museu de Paleontologia">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/museu-paleontologia.png" alt="..." />
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/museupaleo.jpg" alt="..." />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Histórico</div>
                                 <div class="project-name">Museu de Paleontologia</div>
@@ -76,7 +76,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <a class="portfolio-box" href="assets/img/portfolio/fullsize/estadio.jpeg" title="Arena Mauro Sampaio - Romeirão">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/estadio.jpeg" alt="..." />
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/romeirao.jpg" alt="..." />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Esportivo</div>
                                 <div class="project-name">Arena Mauro Sampaio - Romeirão</div>

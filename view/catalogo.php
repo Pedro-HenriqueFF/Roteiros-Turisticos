@@ -5,7 +5,7 @@
 ?>
         <main>
         <header class="page-section bg-secondary">
-            <div class="container px-4 px-lg-5 h-100 pt-5">
+            <!---<div class="container px-4 px-lg-5 h-100 pt-5">
                 <div class="row gx-4 gx-lg-5 h-100">
                     <form id="TagForm" action="" method="post" accept-charset="utf-8" autocomplete="on" enctype="multipart/form-data">
                         <div class="form-floating mb-3">
@@ -15,7 +15,7 @@
                         <div class="d-grid"><button class="btn btn-primary btn-xl" id="submit" type="submit">Pesquisar</button></div>
                     </form>
                 </div>
-            </div>
+            </div>-->
             <div id="portfolio">
                 <div class="container-fluid p-5">
                     <div class="row g-0">
